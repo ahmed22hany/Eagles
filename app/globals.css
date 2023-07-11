@@ -1,27 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'cairo';
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.flexCenter {
+  @apply flex items-center justify-center;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.flexStart {
+  @apply flex items-center justify-start;
+}
+
+.flexBetween {
+  @apply flex justify-between items-center;
+}
+
+.customBtn {
+  @apply flex flex-row justify-center items-center py-1.5 px-5 outline-none rounded-md bg-white shadow;
+}
+
+/* for NavBar */
+
+.text_btn {
+  @apply font-cairo font-normal text-lg text-myColor;
+}
+
+.text-1_Nav {
+  @apply font-cairo font-normal text-lg text-white;
+}
+
+.text-2_Nav {
+  @apply font-cairo font-bold text-lg text-white;
 }
