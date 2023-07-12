@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react'
 import { MdOutlineMailOutline } from 'react-icons/md'
+import { AiOutlinePhone } from 'react-icons/ai'
 
 const Vision = () => {
     return (
@@ -17,15 +18,24 @@ const Vision = () => {
             <div className="max-md:w-full w-[30%]">
                 <h1 className="text-2 text-[24px] text-primary">تواصل معانا</h1>
                 <div className="flex flex-col gap-4 mt-6">
-                    <InputGroup>
+                    <InputGroup className="bg-white">
                         <InputLeftElement pointerEvents='none' className="!right-0 mt-[6px]">
                             <MdOutlineMailOutline color='primary' className="text-primary w-6 h-6" />
                         </InputLeftElement>
-                        <Input type="text" className="vision_input placeholder:text-primary" placeholder={'البريد الاكتروني'} />
+                        <Input type="email" className="vision_input placeholder:text-primary" placeholder={'البريد الاكتروني'} />
                     </InputGroup>
 
-                    <input type="text" className="vision_input" />
-                    <textarea name="message" className=" rounded-[8px] shadow" cols={30} rows={10}></textarea>
+                    <InputGroup className="bg-white">
+                        <InputLeftElement pointerEvents='none' className="!right-0 mt-[6px]">
+                            <AiOutlinePhone color='primary' className="text-primary w-6 h-6" />
+                        </InputLeftElement>
+                        <Input type="number" className="vision_input text-primary placeholder:text-primary" placeholder={'رقم الهاتف'} />
+                    </InputGroup>
+
+                    <textarea name="message" className="bg-white text-primary border-primary outline-primary placeholder:text-primary rounded-[8px] shadow px-6 py-4" placeholder="محتوي الرسالة" rows={6}></textarea>
+
+
+
                 </div>
             </div>
 
