@@ -1,10 +1,11 @@
+import Vision from '@/components/Vision'
 import Swiper from '../components/Swiper'
 
 const Home = () => {
   return (
-    <div className='relative'>
+    <div className='bg-secondary relative'>
       <Swiper />
-      aaaaaaaaaaaaa
+      <Vision />
     </div>
   )
 }

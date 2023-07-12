@@ -27,10 +27,18 @@
   @apply flex flex-row justify-center items-center py-1.5 px-5 outline-none rounded-md bg-white shadow;
 }
 
+.text-1 {
+  @apply font-cairo font-normal;
+}
+
+.text-2 {
+  @apply font-cairo font-bold;
+}
+
 /* for NavBar */
 
 .text_btn {
-  @apply font-cairo font-normal text-lg text-myColor;
+  @apply font-cairo font-normal text-lg text-primary;
 }
 
 .text-1_Nav {
@@ -39,4 +47,27 @@
 
 .text-2_Nav {
   @apply font-cairo font-bold text-lg text-white;
+}
+
+/* Hero Swiper */
+.Hero-swiper_btn {
+  @apply absolute lg:top-[280px] md:top-40 top-[80px] md:right-24 right-14 max-[400px]:py-1 max-xs:top-[65px];
+}
+
+.Hero-swiper_p {
+  @apply absolute md:top-40 top-20 md:right-24 right-14 md:max-w-4xl md:text-2xl max-lg:hidden leading-loose text-right text-white;
+}
+
+.Hero-swiper_overlay {
+  @apply absolute bg-[#181818] opacity-50 w-full h-full;
+}
+
+.Hero-swiper_h1 {
+  @apply absolute md:top-10 md:right-24 right-14 top-5 lg:text-4xl md:text-2xl max-xs:text-[12px] font-bold text-right text-white;
+}
+
+/* Vision */
+
+.vision_input {
+  @apply shadow rounded-[8px] w-full h-[50px];
 }

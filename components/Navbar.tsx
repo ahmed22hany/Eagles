@@ -6,9 +6,10 @@ import { Popover, Transition } from '@headlessui/react'
 
 const Navbar = () => {
     return (
-        <nav className="bg-myColor w-full pb-1 flexBetween px-10 relative z-50">
+        <nav className="bg-primary w-full pb-1 flexBetween px-10 relative z-50">
 
-            <button className="customBtn gap-2 text_btn max-sm:hidden">
+            <button className="customBtn gap-2 text_btn max-sm:hidden relative">
+                <a href="tel:+201009406638" className=" absolute top-0 w-full h-full" />
                 <Image src={'/phone.svg'} alt="Phone Icon" width={17} height={17} />
                 تواصل معنا
             </button>
@@ -33,10 +34,10 @@ const Navbar = () => {
                                 leaveTo="opacity-0 translate-y-1"
                             >
                                 <Popover.Panel className=" absolute">
-                                    <div className="flex flex-col gap-4 mt-4 bg-[#F3EAB3] text-myColor px-8 py-6 rounded-xl shadow">
-                                        <Link href="/" className="hover:bg-white py-2 px-14 rounded-2xl text-center">خدمة </Link>
-                                        <Link href="/about" className="hover:bg-white p-2 rounded-2xl text-center">خدمة 2</Link>
-                                        <Link href="/products" className="hover:bg-white p-2 rounded-2xl text-center">خدمة 3</Link>
+                                    <div className="flex flex-col gap-4 mt-4 bg-white text-primary px-8 py-6 rounded-xl shadow">
+                                        <Link href="/" className="hover:bg-[#F3EAB3] py-2 px-14 rounded-2xl text-center">خدمة </Link>
+                                        <Link href="/about" className="hover:bg-[#F3EAB3] p-2 rounded-2xl text-center">خدمة 2</Link>
+                                        <Link href="/products" className="hover:bg-[#F3EAB3] p-2 rounded-2xl text-center">خدمة 3</Link>
                                     </div>
                                 </Popover.Panel>
                             </Transition>
@@ -71,12 +72,13 @@ const Navbar = () => {
                         leaveTo="opacity-0 translate-y-1"
                     >
                         <Popover.Panel className="absolute z-999">
-                            <div className="flex flex-col gap-4 mt-4 bg-[#F3EAB3] text-myColor p-6 rounded-xl shadow">
-                                <Link href="/" className="hover:bg-white p-2 rounded-2xl text-center">الرئيسية</Link>
-                                <Link href="/about" className="hover:bg-white p-2 rounded-2xl text-center">ماذا عنا</Link>
-                                <Link href="/products" className="hover:bg-white p-2 rounded-2xl text-center">خدماتنا</Link>
+                            <div className="flex flex-col gap-4 mt-4 bg-white text-primary p-6 rounded-xl shadow">
+                                <Link href="/" className="hover:bg-[#F3EAB3] p-2 rounded-2xl text-center">الرئيسية</Link>
+                                <Link href="/about" className="hover:bg-[#F3EAB3] p-2 rounded-2xl text-center">ماذا عنا</Link>
+                                <Link href="/products" className="hover:bg-[#F3EAB3] p-2 rounded-2xl text-center">خدماتنا</Link>
                                 <div>
-                                    <button className="customBtn gap-2 text_btn w-max">
+                                    <button className="customBtn gap-2 text_btn w-max !bg-[#F3EAB3] !text-primary">
+                                        <a href="tel:+2001123382824" className=" absolute top-0 w-full h-full" />
                                         <Image src={'/phone.svg'} alt="Phone Icon" width={17} height={17} />
                                         تواصل معنا
                                     </button>
@@ -88,7 +90,7 @@ const Navbar = () => {
             </div>
 
             <Link href={'/'}>
-                <Image src={'/logo.svg'} alt="Eagles Logo" width={87} height={72} />
+                <Image src={'/logo.svg'} alt="Eagles Logo" width={87} height={72} className="object-contain" />
             </Link>
         </nav>
     )
