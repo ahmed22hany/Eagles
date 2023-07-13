@@ -17,8 +17,6 @@ const images = [
 
 const Slideshow = () => {
 
-
-
   const zoomInProperties = {
     scale: 1,
     duration: 5000,
@@ -35,6 +33,7 @@ const Slideshow = () => {
       </div>
     ),
   };
+
   return (
     <div className="relative">
       <Zoom {...zoomInProperties}>
