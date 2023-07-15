@@ -77,7 +77,7 @@ const Navbar = () => {
                                 <Link href="/about" className="hover:bg-[#F3EAB3] p-2 rounded-2xl text-center">ماذا عنا</Link>
                                 <Link href="/products" className="hover:bg-[#F3EAB3] p-2 rounded-2xl text-center">خدماتنا</Link>
                                 <div>
-                                    <button className="customBtn gap-2 text_btn w-max !bg-[#F3EAB3] !text-primary">
+                                    <button className="customBtn gap-2 text_btn w-max !bg-[#F3EAB3] !text-primary relative">
                                         <a href="tel:+2001123382824" className=" absolute top-0 w-full h-full" />
                                         <Image src={'/phone.svg'} alt="Phone Icon" width={17} height={17} />
                                         تواصل معنا

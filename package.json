@@ -20,11 +20,13 @@
     "@types/react-dom": "18.2.6",
     "autoprefixer": "10.4.14",
     "framer-motion": "^10.12.18",
+    "leaflet": "^1.9.4",
     "next": "13.4.9",
     "postcss": "8.4.25",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
+    "react-leaflet": "^4.2.1",
     "react-slick": "^0.29.0",
     "react-slideshow-image": "^4.2.1",
     "slick-carousel": "^1.8.1",
@@ -32,6 +34,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.3",
     "@types/react-slick": "^0.23.10"
   }
 }

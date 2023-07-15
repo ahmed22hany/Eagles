@@ -71,3 +71,13 @@
 .vision_input {
   @apply shadow rounded-[8px] w-full h-[50px];
 }
+
+/* About */
+
+.about-header {
+  @apply text-center text-[20px] text-primary max-md:text-[16px] max-xs:text-[12px];
+}
+
+.about-text {
+  @apply text-center text-[20px] text-primary max-md:text-[16px] max-xs:text-[12px]
+}

@@ -1,6 +1,7 @@
 import Vision from '@/components/Vision'
 import Swiper from '../components/Swiper'
-import Caro from '@/components/Caro'
+import Clients from '@/components/Clients'
+import Footer from '@/components/Footer'
 
 
 const Home = () => {
@@ -8,7 +9,8 @@ const Home = () => {
     <div className='bg-secondary relative'>
       <Swiper />
       <Vision />
-      <Caro />
+      <Clients />
+      <Footer />
     </div>
   )
 }

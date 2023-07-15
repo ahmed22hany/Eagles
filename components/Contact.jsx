@@ -18,7 +18,9 @@ const Contact = () => {
     const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
-        const { email, value } = e.target;
+        const { email, value } = e.target
+
+        console.log(e.target.value);
 
         setForm({ ...form, [email]: value });
     }

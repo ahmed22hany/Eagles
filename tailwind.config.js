@@ -16,6 +16,7 @@ module.exports = {
         'primary': '#24738C',
         'white': '#FFFFFF',
         'secondary': '#EEFBF4',
+        'footer': '#24738C',
       },
       fontFamily: {
         cairo: 'cairo',
