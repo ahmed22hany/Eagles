@@ -17,8 +17,8 @@ const Navbar = () => {
             {/* Desktop view of links */}
             <ul className="flex gap-8 max-sm:hidden">
                 <li className="text-1_Nav">
-                    <Link className="flexCenter gap-2" href={'/products'}>
-                        <Popover className={'relative'}>
+                    <Link className="flexCenter gap-2 relative" href={'/products'}>
+                        <Popover>
                             <Popover.Button className='flexCenter gap-2 outline-none border-none'>
                                 <span>
                                     <Image src={'/vector.svg'} alt={'Arrow'} width={14} height={6.81} />
@@ -33,7 +33,7 @@ const Navbar = () => {
                                 leaveFrom="opacity-100 translate-y-0"
                                 leaveTo="opacity-0 translate-y-1"
                             >
-                                <Popover.Panel className=" absolute">
+                                <Popover.Panel className="absolute">
                                     <div className="flex flex-col gap-4 mt-4 bg-white text-primary px-8 py-6 rounded-xl shadow">
                                         <Link href="/" className="hover:bg-[#F3EAB3] py-2 px-14 rounded-2xl text-center">خدمة </Link>
                                         <Link href="/about" className="hover:bg-[#F3EAB3] p-2 rounded-2xl text-center">خدمة 2</Link>
@@ -42,7 +42,6 @@ const Navbar = () => {
                                 </Popover.Panel>
                             </Transition>
                         </Popover>
-
                     </Link>
                 </li>
                 <li className="text-1_Nav">
