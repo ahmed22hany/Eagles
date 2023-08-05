@@ -1,20 +1,36 @@
-import ContactProducts from '@/components/ContactProducts'
-import InfoServices from '@/components/InfoServices'
-import LiveProductImages from '@/components/LiveProductImages'
-import ServiceImages from '@/components/ServiceImages'
-import Swiper from '@/components/Swiper'
-import React from 'react'
+import ContactProducts from '@/components/ContactProducts';
+import InfoServices from '@/components/InfoServices';
+import LiveProductImages from '@/components/LiveProductImages';
+import ServiceImages from '@/components/ServiceImages';
+import Swiper from '@/components/Swiper';
 
-const Products = () => {
-    return (
-        <div className='bg-secondary'>
-            <Swiper />
-            <ServiceImages />
-            <InfoServices />
-            <ContactProducts />
-            <LiveProductImages />
-        </div>
-    )
-}
+type Props = {
+  params: {
+    id: string;
+  };
+};
 
-export default Products
+const getData = async (context: Props) => {
+  const data = await fetch(
+    `http://localhost:3000/api/products/${context.params.id}`
+  );
+
+  return await data.json();
+};
+
+const Products = async (context: Props) => {
+  const test = await getData(context);
+  console.log('🚀 ~ file: page.tsx:24 ~ Products ~ test:', test);
+
+  return (
+    <div className='bg-secondary'>
+      <Swiper />
+      <ServiceImages data={{ test }} />
+      <InfoServices />
+      <ContactProducts />
+      <LiveProductImages />
+    </div>
+  );
+};
+
+export default Products;
