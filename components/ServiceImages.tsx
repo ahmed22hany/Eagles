@@ -2,12 +2,11 @@ import Image from 'next/image';
 import React from 'react'
 
 const productImage = [
-    { source: '/product1.png', },
-    { source: '/product2.png', },
-    { source: '/product3.png', },
-    { source: '/product4.png', }
+    { source: '/product1.png' },
+    { source: '/product2.png' },
+    { source: '/product3.png' },
+    { source: '/product4.png' },
 ];
-
 
 
 const ServiceImages = () => {

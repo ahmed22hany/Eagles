@@ -19,9 +19,9 @@ const InfoServices = () => {
     return (
         <div dir='rtl'>
             {infoText.map((info, index) => (
-                <div key={index} className=' leading-loose'>
+                <div key={index} className=' leading-loose p-6'>
                     <h1 className='text-2 text-primary'>{info.title}</h1>
-                    <pre className=' whitespace-pre-wrap max-w-[1000px] text-1 text-primary'>
+                    <pre className='whitespace-pre-wrap max-w-[1000px] text-1 text-primary'>
                         {info.desc}
                     </pre>
                 </div>

@@ -34,7 +34,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/Contact.jsx",
     "components/ContactProducts.jsx",
   ],
   "exclude": [

@@ -61,7 +61,7 @@ const ContactProducts = () => {
 
     return (
         <div dir='rtl'>
-            <h1 className='text-2 text-[24px] text-primary pt-2'>تواصل معانا</h1>
+            <h1 className='text-2 text-[24px] text-primary pt-2 px-4'>تواصل معانا</h1>
             <form
                 ref={formRef}
                 onSubmit={handleSubmit}

@@ -1,68 +1,43 @@
 'use client'
 
-import React, { useRef, useState } from 'react'
-import emailjs from '@emailjs/browser'
-
+import React, { FormEvent, useState } from 'react'
 
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react'
 import { MdOutlineMailOutline } from 'react-icons/md'
 import { AiOutlinePhone } from 'react-icons/ai'
 
+
 const Contact = () => {
-    const formRef = useRef();
-    const [form, setForm] = useState({
-        email: '',
-        number: '',
-        message: '',
-    })
+
+
+    const [email, setEmail] = useState('');
+    const [number, setNumber] = useState('');
+    const [message, setMessage] = useState('');
     const [loading, setLoading] = useState(false);
 
-    const handleChange = (e) => {
-        const { email, value } = e.target
 
-        console.log(e.target.value);
 
-        setForm({ ...form, [email]: value });
-    }
-
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
         setLoading(true);
-
-        emailjs.sendForm(
-            'service_66rvt4q',
-            'template_6750abu',
-            {
-                from_number: form.number,
-                to_name: 'Ahmed',
-                from_email: form.email,
-                to_email: 'ahany5673@gmail.com',
-                message: form.message
-            },
-            's9ksSxEKl3bxQIoL-'
-        )
-
-            .then(() => {
-                alert('Thank you , I will get back to you as soon as possible')
-
-                setForm({
-                    email: '',
-                    number: '',
-                    message: '',
-                })
-            }, (error) => {
-                setLoading(false)
-
-                console.log(error);
-
-                alert('Something went wrong.')
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                body: JSON.stringify({
+                    email, number, message
+                }),
+                headers: {
+                    'content-type': 'application/json'
+                }
             })
+        } catch (error: any) {
+            console.log('Error', error)
+        }
     }
 
     return (
         <div>
             <form
-                ref={formRef}
                 onSubmit={handleSubmit}
                 className="flex flex-col gap-4 mt-6"
             >
@@ -73,8 +48,8 @@ const Contact = () => {
                     <Input
                         type="email"
                         name='email'
-                        value={form.email}
-                        onChange={handleChange}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         className="vision_input !text-primary placeholder:text-primary"
                         placeholder={'البريد الاكتروني'}
                     />
@@ -87,8 +62,8 @@ const Contact = () => {
                     <Input
                         type="number"
                         name='number'
-                        value={form.number}
-                        onChange={handleChange}
+                        value={number}
+                        onChange={(e) => setNumber(e.target.value)}
                         className="vision_input text-primary placeholder:text-primary"
                         placeholder={'رقم الهاتف'}
                     />
@@ -96,8 +71,8 @@ const Contact = () => {
 
                 <textarea
                     name="message"
-                    value={form.message}
-                    onChange={handleChange}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                     className="bg-white text-primary border-primary outline-primary placeholder:text-primary rounded-[8px] shadow px-6 py-4"
                     placeholder="محتوي الرسالة"
                     rows={6}

@@ -5,11 +5,9 @@ const liveImages = [
     {
         source: "/live1.png"
     },
-
     {
         source: "/live2.png"
     },
-
     {
         source: "/live3.png"
     }
