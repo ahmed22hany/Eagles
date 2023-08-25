@@ -4,6 +4,8 @@ import LiveProductImages from '@/components/LiveProductImages';
 import ServiceImages from '@/components/ServiceImages';
 import Swiper from '@/components/Swiper';
 
+export const revalidate = 0;
+
 type Props = {
   params: {
     id: string;
@@ -26,9 +28,9 @@ const Products = async (context: Props) => {
     <div className='bg-secondary'>
       <Swiper />
       <ServiceImages data={{ test }} />
-      <InfoServices />
+      <InfoServices data={{ test }} />
       <ContactProducts />
-      <LiveProductImages />
+      <LiveProductImages data={{ test }} />
     </div>
   );
 };
