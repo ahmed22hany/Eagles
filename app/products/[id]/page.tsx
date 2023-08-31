@@ -22,7 +22,6 @@ const getData = async (context: Props) => {
 
 const Products = async (context: Props) => {
   const test = await getData(context);
-  console.log('🚀 ~ file: page.tsx:24 ~ Products ~ test:', test);
 
   return (
     <div className='bg-secondary'>

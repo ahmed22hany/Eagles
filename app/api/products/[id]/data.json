@@ -1,5 +1,5 @@
 {
-  "service1": {
+  "cctv": {
     "title": "كاميرات المراقبة CCTV",
     "productImage": [
       {
@@ -39,7 +39,7 @@
       }
     ]
   },
-  "service2": {
+  "fire-system": {
     "title": "انذار الحريق",
     "productImage": [
       {
@@ -152,7 +152,7 @@
       }
     ]
   },
-  "service5": {
+  "sound-systems": {
     "productImage": [
       {
         "source": "/sound1.jpg"
@@ -227,7 +227,7 @@
       }
     ]
   },
-  "service7": {
+  "networking": {
     "productImage": [
       {
         "source": "/network1.png"
@@ -263,7 +263,7 @@
       }
     ]
   },
-  "service8": {
+  "gps-services": {
     "productImage": [
       {
         "source": "/tracker1.jpg"
@@ -432,9 +432,7 @@
       },
       {
         "title": "خصائص الخدمة",
-        "desc": [
-          "-بصمة الإصبع <br>-بصمة الوجه"
-        ]
+        "desc": ["-بصمة الإصبع <br>-بصمة الوجه"]
       }
     ],
     "liveImages": [
