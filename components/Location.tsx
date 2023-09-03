@@ -5,23 +5,29 @@ import React from 'react';
 import { MapContainer, Marker, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { Icon } from 'leaflet';
+import { Text } from './Text';
 
 const Location = () => {
   return (
     <div className='max-lg:w-full w-[60%] text-right text-white leading-loose'>
       <h1 className='text-2 text-[24px] '>مـوقـعـنـا</h1>
-      <p className='text-1 text-[20px] flex gap-4 max-xl:justify-start max-xl:items-baseline'>
-        <Image
-          src={'/flag1.png'}
-          alt='Egypt Flag'
-          width={22}
-          height={22}
-          className='object-contain'
-        />
-        القاهرة - مدينة نصر - زهراء مدينة نصر - عمارة ۲۰۷۳ - شقة ٤ بعمارات ضباط
-        القوات المسلحة
+      <p>
+        <Text
+          className='flex gap-4 max-xl:justify-start max-xl:items-baseline'
+          variant='body'
+        >
+          <Image
+            src={'/flag1.png'}
+            alt='Egypt Flag'
+            width={22}
+            height={22}
+            className='object-contain'
+          />
+          القاهرة - مدينة نصر - زهراء مدينة نصر - عمارة ۲۰۷۳ - شقة ٤ بعمارات
+          ضباط القوات المسلحة
+        </Text>
       </p>
-      <p className='text-1 text-[20px] flex justify-start items-baseline gap-4'>
+      <Text className='flex justify-start items-baseline gap-4' variant='body'>
         <Image
           src={'/flag2.png'}
           alt='Saudi Flag'
@@ -31,12 +37,12 @@ const Location = () => {
         />
         الرياض - طريق الملك عبد العزيز الفرعي - حي العارض - شمال طريق الملك
         سلمان ۲٥۲۹ - ٦٥١۳ - ١٣٣٤٥ / مكتب ٥
-      </p>
+      </Text>
       <div>
         <MapContainer
-          className=' mt-4 w-[593px] h-[282px] max-md:!w-[350px] max-xs:!w-[250px] rounded-lg'
+          className='mt-4 w-[100%] h-[282px] max-md:!w-[100%] max-xs:!w-[100%] rounded-lg'
           center={[30.0528718, 31.399776]}
-          zoom={13}
+          zoom={15}
           scrollWheelZoom={false}
         >
           <TileLayer
@@ -48,8 +54,8 @@ const Location = () => {
             icon={
               new Icon({
                 iconUrl: '/location.png',
-                iconSize: [41, 41],
-                iconAnchor: [12, 41],
+                iconSize: [85, 85],
+                iconAnchor: [16, 38],
               })
             }
           />

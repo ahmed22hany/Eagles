@@ -51,7 +51,10 @@ const Navbar = () => {
             <MenuList className='p-5 bg-secondary'>
               <div>
                 {services.map((serv) => (
-                  <MenuItem className='hover:bg-white p-2 rounded-2xl text-center text-primary'>
+                  <MenuItem
+                    className='hover:bg-white p-2 rounded-2xl text-center text-primary'
+                    key={serv.service}
+                  >
                     <Link href={serv.url} className='text-center w-full'>
                       {serv.service}
                     </Link>

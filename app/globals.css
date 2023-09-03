@@ -51,7 +51,7 @@
 
 /* Hero Swiper */
 .Hero-swiper_btn {
-  @apply absolute lg:top-[280px] md:top-40 top-[80px] md:right-24 right-14 max-[400px]:py-1 max-xs:top-[65px];
+  @apply absolute lg:top-[280px] md:top-40  md:right-24 lg:right-24 max-[400px]:py-1 max-sm:top-[60%] max-sm:left-[50%] max-sm:translate-x-[-50%] max-sm:translate-y-[-50%];
 }
 
 .Hero-swiper_p {
@@ -60,10 +60,6 @@
 
 .Hero-swiper_overlay {
   @apply absolute bg-[#181818] opacity-50 w-full h-full;
-}
-
-.Hero-swiper_h1 {
-  @apply absolute md:top-10 md:right-24 right-14 top-5 lg:text-4xl md:text-2xl max-xs:text-[12px] font-bold text-right text-white;
 }
 
 /* Vision */
@@ -79,5 +75,5 @@
 }
 
 .about-text {
-  @apply text-center text-[20px] text-primary max-md:text-[16px] max-xs:text-[12px]
+  @apply text-center  text-primary max-md:text-[16px] max-xs:text-[12px];
 }
