@@ -17,10 +17,10 @@ const footerItems = [
     },
   },
   {
-    title: 'Eaglesinternational47@gmail.com',
+    title: 'Eaglesinternational46@gmail.com',
     icon: '/letter-white.png',
     onClick: () => {
-      window.open('mailto:Eaglesinternational47@gmail.com');
+      window.open('mailto:Eaglesinternational46@gmail.com');
     },
   },
 ];

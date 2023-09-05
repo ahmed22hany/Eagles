@@ -10,15 +10,15 @@ import { MdOutlineMailOutline } from 'react-icons/md'
 import { AiOutlinePhone } from 'react-icons/ai'
 import React, { useState } from 'react'
 
-export type FormData = {
+export type FormDataProduct = {
   tel: number;
   email: string;
   message: string;
 };
 
-const Contact: FC = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
-  function onSubmit(data: FormData) {
+const ContactProducts: FC = () => {
+  const { register, handleSubmit, formState: { errors } } = useForm<FormDataProduct>();
+  function onSubmit(data: FormDataProduct) {
     sendEmail(data);
   }
   return (
@@ -28,7 +28,7 @@ const Contact: FC = () => {
         onSubmit={handleSubmit(onSubmit)}
         className="flex max-md:flex-col gap-4 flex-wrap mt-6 p-2"
       >
-        <div className='w-[100%] max-md:w-full'>
+        <div className='w-[45%] max-md:w-full'>
           <InputGroup className="bg-white">
             <InputLeftElement className="!right-0 mt-[6px]">
               <MdOutlineMailOutline color='primary' className="text-primary w-6 h-6" />
@@ -70,7 +70,7 @@ const Contact: FC = () => {
         </div>
 
 
-        <div className='w-[100%] max-md:w-full'>
+        <div className='w-[50%] max-md:w-full'>
           <textarea
             className="bg-white w-full text-primary border-primary outline-primary placeholder:text-primary rounded-[8px] shadow px-6 py-4"
             placeholder="محتوي الرسالة"
@@ -95,4 +95,4 @@ const Contact: FC = () => {
   )
 };
 
-export default Contact;
+export default ContactProducts;

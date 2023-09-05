@@ -32,7 +32,6 @@ const Vision = () => {
         </div>
 
         <div className='max-md:w-full w-[30%]'>
-          <h1 className='text-2 text-[24px] text-primary'>تواصل معانا</h1>
           <Contact />
         </div>
       </div>
